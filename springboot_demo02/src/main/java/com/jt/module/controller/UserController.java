@@ -17,7 +17,6 @@ public class UserController {
     //查询所有用户
     @GetMapping("/findAll")
     public List<User> dofindAll(){
-        System.out.println("aaaaaa");
         return userService.findAllUser();
 
     }
