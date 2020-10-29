@@ -1,0 +1,47 @@
+# 应用名称
+spring:
+  application:
+    name: springboot_demo01
+  # spring 静态资源扫描路径
+  resources:
+    static-locations: /static/
+  #视图解析器
+  mvc:
+    view:
+      prefix:
+      suffix:
+    async:
+      request-timeout:
+  #当前环境
+  profiles:
+    active: dev
+
+---
+#开发环境
+spring:
+  profiles: dev
+
+# 应用服务 WEB 访问端口
+server:
+  port: 80
+  #
+  servlet:
+    context-path:
+
+aaa:
+  bbb: hello!
+
+---
+#生产环境
+spring:
+  profiles: prod
+
+# 应用服务 WEB 访问端口
+server:
+  port: 80
+  #
+  servlet:
+    context-path:
+
+aaa:
+  bbb: fack!
