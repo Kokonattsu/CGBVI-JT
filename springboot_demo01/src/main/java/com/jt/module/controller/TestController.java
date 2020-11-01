@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @Value("${aaa.bbb}")
-    private String value;
-
-    @GetMapping("/index")
-    public String getValue(){
-        return value;
-    }
+//    @Value("${aaa.bbb}")
+//    private String value;
+//
+//    @GetMapping("/index")
+//    public String getValue(){
+//        return value;
+//    }
 
 
 }

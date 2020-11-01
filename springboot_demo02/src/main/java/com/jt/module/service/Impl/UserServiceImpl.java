@@ -17,7 +17,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> findAllUser() {
-        List<User> list = userMapper.findAllUser();
-        return list;
+//        List<User> list = userMapper.findAllUser();
+//        return list;
+        //mybatis-plus查询
+        return userMapper.selectList(null);
+
     }
 }

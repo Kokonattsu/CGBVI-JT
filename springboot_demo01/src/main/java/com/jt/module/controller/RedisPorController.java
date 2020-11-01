@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RedisPorController {
 
-    @Value("${redis.proHost}")
-    private String proHost;
-    @Value("${redis.proPort}")
-    private String proPort;
-
-    @GetMapping("/getMsg")
-    public String getMsg(){
-        return proHost+":"+proPort;
-    }
+//    @Value("${redis.proHost}")
+//    private String proHost;
+//    @Value("${redis.proPort}")
+//    private String proPort;
+//
+//    @GetMapping("/getMsg")
+//    public String getMsg(){
+//        return proHost+":"+proPort;
+//    }
 }

@@ -3,6 +3,8 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/springboot_demo01/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_demo02/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_demo03/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/testspringmvc/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
