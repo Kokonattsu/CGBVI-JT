@@ -47,5 +47,8 @@ public class UserController {
     }
 
     //根据id删除对象
+    public Integer doDeleteById(){
 
+        return null;
+    }
 }

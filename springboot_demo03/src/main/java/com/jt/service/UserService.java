@@ -8,4 +8,6 @@ public interface UserService {
     List<User> findAll();
 
     List<User> doFindObjectByConditions(String condition);
+
+    Integer doDeleteById(Integer userId);
 }

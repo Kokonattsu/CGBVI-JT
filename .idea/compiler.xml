@@ -11,9 +11,12 @@
         <module name="springboot_demo03" />
         <module name="springboot_demo02" />
         <module name="springboot_demo01" />
+        <module name="jt_common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jt2007" target="1.8" />
+      <module name="jt_common" target="1.8" />
       <module name="springboot_demo01" target="1.8" />
       <module name="springboot_demo02" target="1.8" />
       <module name="springboot_demo03" target="1.8" />
@@ -22,6 +25,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="jt2007" options="" />
+      <module name="jt_common" options="-parameters" />
       <module name="springboot_demo01" options="-parameters" />
       <module name="springboot_demo02" options="-parameters" />
       <module name="springboot_demo03" options="-parameters" />

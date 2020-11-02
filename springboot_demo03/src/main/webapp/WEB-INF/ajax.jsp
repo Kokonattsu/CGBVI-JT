@@ -6,7 +6,7 @@
 
 <html>
 <head>
-	<title>您好Springboot</title>
+	<title>学生信息表</title>
 
 </head>
 <body class="container">

@@ -36,4 +36,12 @@ public class UserServiceImpl implements UserService {
 
         return list;
     }
+
+    @Override
+    public Integer doDeleteById(Integer userId) {
+        if(userId==0){return -1;}
+        int row = usermapper.deleteById(userId);
+
+        return row;
+    }
 }
