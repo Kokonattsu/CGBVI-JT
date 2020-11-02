@@ -7,6 +7,10 @@
     <groupId>com.jt</groupId>
     <artifactId>jt2007</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>jt_common</module>
+        <module>jt_manage</module>
+    </modules>
     <packaging>pom</packaging>
 
     <parent>
