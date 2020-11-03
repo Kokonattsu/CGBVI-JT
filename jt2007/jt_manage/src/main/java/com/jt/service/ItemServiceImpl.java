@@ -20,8 +20,6 @@ public class ItemServiceImpl implements ItemService {
 	@Autowired
 	private ItemMapper itemMapper;
 
-	@Autowired
-	private ItemCatMapper itemCatMapper;
 
 
 	@Override
@@ -38,10 +36,5 @@ public class ItemServiceImpl implements ItemService {
 		return new EasyUITable( iPage.getTotal(),iPage.getRecords());
 	}
 
-	@Override
-	public String findItemName(Long itemCatId) {
-		ItemCat itemCat = itemCatMapper.selectById(itemCatId);
 
-		return itemCat.getName();
-	}
 }

@@ -12,6 +12,7 @@
 </style>
 </head>
 <body class="easyui-layout">
+	<!--左侧模块-->
     <div data-options="region:'west',title:'菜单',split:true" style="width:180px;">
     	<ul id="menu" class="easyui-tree" style="margin-top: 10px;margin-left: 5px;">
          	<li>
@@ -31,6 +32,7 @@
          	</li>
          </ul>
     </div>
+
     <div data-options="region:'center',title:''">
     	<div id="tabs" class="easyui-tabs">
 		    <div title="首页" style="padding:20px;">
