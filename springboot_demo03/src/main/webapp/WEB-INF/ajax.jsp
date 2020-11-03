@@ -10,9 +10,51 @@
 
 </head>
 <body class="container">
+	<!--顶部灰条-->
 	<div style="background-color: whitesmoke">
-		<a href="#" id="registerId">注册</a>
-	</div>
+		<!--注册按钮-->
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+			注册
+		</button>
+
+		<!-- 模态框框体 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">注册用户</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+					<!--模态框内容-->
+						<form>
+							<div class="form-group">
+								<label for="usernameId" >姓名</label><br>
+								<input id="usernameId" type="text" class="form-control" placeholder="请输入性名">
+							</div>
+							<div class="form-group">
+								<label for="ageId" >年龄</label><br>
+								<input id="ageId" type="text" class="form-control" placeholder="请输入年龄">
+							</div>
+							<div>
+								<label>性别</label>
+								<input type="radio" name="userType">男
+								<input type="radio" name="userType">女
+							</div>
+						</form>
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div><!--顶部灰条闭合标签-->
 
 	<table border="1px" width="65%" align="center"
 		   id="tableId" class="table-bordered table-hover table-condensed">
@@ -44,9 +86,14 @@
 		</tbody>
 
 	</table>
+
+
+
 </body>
 <script src="../js/jquery.min.js"></script>
+
 <link href="../bootstrap-4.5.0/css/bootstrap.css" rel="stylesheet"/>
+<script src="../bootstrap-4.5.0/js/bootstrap.js"></script>
 <script>
 	//注册事件
 	$(function(){
@@ -86,13 +133,13 @@
 					<td>\${user.sex}</td>
 					<td>
 						<button style="box-shadow: none"
-							class="btn btn-link update">
+							class="btn btn-link update"
+							data-toggle="modal" data-target="#myModal">
 							修改
 						</button>
 					</td>
 					<td>
-<button
-style="box-shadow: none"
+	<button style="box-shadow: none"
 class="btn btn-link delete" href="#myPopup1" data-rel="popup"
 >删除</button>
 					</td>`;
@@ -112,7 +159,8 @@ class="btn btn-link delete" href="#myPopup1" data-rel="popup"
 
 	//点击删除事件
 	function doDeleteById() {
-		let user=$(this).parent().parent().data("user");
+		let tr=$(this).parent().parent();
+		let user=tr.data("user");
 		let id=user.id;
 		//console.log(id);
 		//confirm("是否永久删除  "+user.name);
@@ -126,10 +174,11 @@ class="btn btn-link delete" href="#myPopup1" data-rel="popup"
 				if(result.data==1){
 					Alert($("body"),100,"删除成功"+user.name);
 				}else {
-
+					Alert($("body"),100,result);
 				}
 			}
 		});
+		tr.remove();
 	}
 
 	//修改事件
@@ -138,11 +187,13 @@ class="btn btn-link delete" href="#myPopup1" data-rel="popup"
 		let tr = $(this).parent().parent();
 		let id=tr.data("user").id;
 		console.log(id);
+
 	}
 
 	//注册事件
 	function doRegister() {
 		console.log("注册")
+
 	}
 
 	//弹窗事件（绑在什么元素上，弹窗宽度，弹窗内容）
@@ -170,6 +221,8 @@ class="btn btn-link delete" href="#myPopup1" data-rel="popup"
 		element.append(html);
 		//使弹窗消失
 		$(".msg").fadeOut("slow");
+
+
 
 	}
 

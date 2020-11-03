@@ -10,4 +10,8 @@ public interface UserService {
     List<User> doFindObjectByConditions(String condition);
 
     Integer doDeleteById(Integer userId);
+
+    Integer doSaveObject(User user);
+
+    Integer doUpdateById(User user);
 }

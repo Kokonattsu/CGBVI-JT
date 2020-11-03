@@ -6,10 +6,7 @@ import com.jt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.Mapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -47,8 +44,20 @@ public class UserController {
     }
 
     //根据id删除对象
-    public Integer doDeleteById(){
+    @RequestMapping("/doDeleteById")
+    public Integer doDeleteById(Integer userId){
+        return userService.doDeleteById(userId);
+    }
 
-        return null;
+    //添加
+    @PostMapping("")
+    public Integer doSaveObject(User user){
+        return userService.doSaveObject(user);
+    }
+
+    //根据id修改
+    @PutMapping("")
+    public Integer doUpdateById(User user){
+        return userService.doUpdateById(user);
     }
 }
