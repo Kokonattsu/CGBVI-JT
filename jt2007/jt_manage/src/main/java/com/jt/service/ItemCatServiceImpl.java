@@ -27,9 +27,11 @@ public class ItemCatServiceImpl implements ItemCatService{
     public List<EasyUITree> findItemCatList(Long parentId) {
 
         List<EasyUITree> treeList=new ArrayList();
+
         QueryWrapper queryWrapper=new QueryWrapper();
         queryWrapper.eq("parent_id", parentId);
         List<ItemCat> itemCatList = itemCatMapper.selectList(queryWrapper);
+
         for (ItemCat itemCat:itemCatList){
             Long id =itemCat.getId();
             String text=itemCat.getName();

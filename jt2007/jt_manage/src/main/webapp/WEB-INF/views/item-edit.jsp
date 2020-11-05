@@ -70,12 +70,14 @@
 		//实例化编辑器
 		itemEditEditor = KindEditorUtil.createEditor("#itemeEditForm [name=itemDesc]");
 	});
-	
+
+	//商品提交方法
 	function submitForm(){
 		if(!$('#itemeEditForm').form('validate')){
 			$.messager.alert('提示','表单还未填写完成!');
 			return ;
 		}
+		//eval() 函数计算 JavaScript 字符串，并把它作为脚本代码来执行。
 		$("#itemeEditForm [name=price]").val(eval($("#itemeEditForm [name=priceView]").val()) * 100);
 		itemEditEditor.sync();
 		
@@ -99,7 +101,7 @@
 		paramJson = JSON.stringify(paramJson);
 		
 		$("#itemeEditForm [name=itemParams]").val(paramJson);
-		alert($("#itemeEditForm").serialize());
+		//alert($("#itemeEditForm").serialize());
 		$.post("/item/update",$("#itemeEditForm").serialize(), function(data){
 			if(data.status == 200){
 				$.messager.alert('提示','修改商品成功!','info',function(){

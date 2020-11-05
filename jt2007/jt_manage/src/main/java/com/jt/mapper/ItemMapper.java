@@ -9,5 +9,11 @@ import java.util.List;
 public interface ItemMapper extends BaseMapper<Item>{
 
     List<Item> findItemByPage(Integer start,Integer rows);
-	
+
+    Integer doDeleteById(Long[] ids);
+
+    @Select("select count(*) from tb_item")
+    Long findCount();
+
+    Integer insertObject();
 }

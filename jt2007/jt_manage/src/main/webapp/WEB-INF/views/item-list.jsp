@@ -64,7 +64,7 @@
         			var data = $("#itemList").datagrid("getSelections")[0];
         			data.priceView = KindEditorUtil.formatPrice(data.price);
         			$("#itemeEditForm").form("load",data);
-        			
+
         			// 加载商品描述
         			//_data = SysResult.ok(itemDesc)
         			$.getJSON('/item/query/item/desc/'+data.id,function(_data){
@@ -76,6 +76,7 @@
         			
         			//加载商品规格
         			$.getJSON('/item/param/item/query/'+data.id,function(_data){
+        			    debugger;
         				if(_data && _data.status == 200 && _data.data && _data.data.paramData){
         					$("#itemeEditForm .params").show();
         					$("#itemeEditForm [name=itemParams]").val(_data.data.paramData);
@@ -101,7 +102,9 @@
         					 $("#itemeEditForm .params td").eq(1).html(html);
         				}
         			});
-        			
+
+
+
         			KindEditorUtil.init({
         				"pics" : data.image,
         				"cid" : data.cid,
@@ -149,7 +152,7 @@
         	$.messager.confirm('确认','确定下架ID为 '+ids+' 的商品吗？',function(r){
         	    if (r){
         	    	var params = {"ids":ids};
-                	$.post("/item/instock",params, function(data){
+                	$.post("/item/UpdateStatus/2",params, function(data){
             			if(data.status == 200){
             				$.messager.alert('提示','下架商品成功!',undefined,function(){
             					$("#itemList").datagrid("reload");
@@ -171,7 +174,7 @@
         	$.messager.confirm('确认','确定上架ID为 '+ids+' 的商品吗？',function(r){
         	    if (r){
         	    	var params = {"ids":ids};
-                	$.post("/item/reshelf",params, function(data){
+                	$.post("/item/UpdateStatus/1",params, function(data){
             			if(data.status == 200){
             				$.messager.alert('提示','上架商品成功!',undefined,function(){
             					$("#itemList").datagrid("reload");

@@ -134,6 +134,7 @@ var TT = KindEditorUtil = {		//相当于java中定义的工具类，里面提供
     			    iconCls:'icon-save',
     			    title:'选择类目',
     			    onOpen : function(){ //当窗口打开后执行
+
     			    	var _win = this;
     			    	$("ul",_win).tree({
     			    		url:'/item/cat/list',
