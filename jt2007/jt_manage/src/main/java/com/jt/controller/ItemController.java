@@ -1,18 +1,14 @@
 package com.jt.controller;
 
 import com.jt.pojo.Item;
+import com.jt.pojo.ItemDesc;
 import com.jt.vo.EasyUITable;
 import com.jt.vo.SysResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import com.jt.service.ItemService;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.jar.JarEntry;
 
 @Slf4j
 @RestController
@@ -27,9 +23,9 @@ public class ItemController {
 	}
 
 	@RequestMapping("/item/save")
-	public SysResult doSaveObject(Item item) {
+	public SysResult doSaveObject(Item item, ItemDesc itemDesc) {
 
-		Integer row = itemService.doSaveObject(item);
+		Integer row = itemService.doSaveObject(item,itemDesc);
 		return SysResult.success("成功添加" + row + "件商品", null);
 	}
 
@@ -57,6 +53,12 @@ public class ItemController {
 			sysResult.setMsg("成功上架" + row + "件商品");
 		}
 		return sysResult;
+	}
+
+	@RequestMapping("/item/query/item/desc/{itemId}")
+	public SysResult doFindItemDesc(@PathVariable Long itemId){
+		ItemDesc itemDesc=itemService.doFindItemDesc(itemId);
+		return SysResult.success(itemDesc);
 	}
 
 

@@ -15,5 +15,7 @@ public interface ItemMapper extends BaseMapper<Item>{
     @Select("select count(*) from tb_item")
     Long findCount();
 
-    Integer insertObject();
+    Integer insertObject(Item item);
+
+    Integer updateStatus(Long[] ids, Integer status);
 }

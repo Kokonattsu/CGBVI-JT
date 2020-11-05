@@ -1,20 +1,16 @@
 package com.jt.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.jt.mapper.ItemCatMapper;
+import com.jt.mapper.ItemDescMapper;
 import com.jt.pojo.Item;
-import com.jt.pojo.ItemCat;
+import com.jt.pojo.ItemDesc;
 import com.jt.vo.EasyUITable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jt.mapper.ItemMapper;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,6 +18,8 @@ public class ItemServiceImpl implements ItemService {
 	
 	@Autowired
 	private ItemMapper itemMapper;
+	@Autowired
+	private ItemDescMapper itemDescMapper;
 
 	/**查询页面对象*/
 	@Override
@@ -47,45 +45,67 @@ public class ItemServiceImpl implements ItemService {
 
 	/**添加商品*/
 	@Override
-	public Integer doSaveObject(Item item) {
+	@Transactional
+	public Integer doSaveObject(Item item, ItemDesc itemDesc) {
 
 		item.setStatus(1);
-		//Integer row = itemMapper.insert(item);
-		Integer row=itemMapper.insertObject();
+	//-------使用mybatisPlus的方式----------
+		Integer row = itemMapper.insert(item);
+		QueryWrapper queryWrapper=new QueryWrapper();
+		itemDesc.setItemId(item.getId());
+		itemDescMapper.insert(itemDesc);
+
+		//-----------原生MyBatis-------------
+//		Integer row=itemMapper.insertObject(item);
+
+
 		return row;
 	}
 
+	/*更改商品*/
 	@Override
 	public Integer doUpdateById(Item item) {
 		return itemMapper.updateById(item);
 	}
 
+	/*根据主键批量删除商品*/
 	@Override
 	public Integer doDeleteById(Long[] ids) {
 	//-------使用mybatisPlus的方式----------
 //		List<Long> idList = Arrays.asList(ids);
 //		Integer row=itemMapper.deleteBatchIds(idList);
 
+	//-----------原生MyBatis-------------
 		Integer row=itemMapper.doDeleteById(ids);
+
 		return row;
 	}
 
+	/*更改上架状态*/
 	@Override
 	public Integer doInstockAndReshelf(Long[] ids,Integer status) {
 		Integer row=0;
-//		for (Long id:ids){
-//			Item item=new Item().setId(id).setStatus(status);
-//			row=row+itemMapper.updateById(item);
-//		}
-		Item item=new Item().setStatus(status);
-		QueryWrapper queryWrapper=new QueryWrapper();
-		queryWrapper.in("id", Arrays.asList(ids));
-		row = itemMapper.update(item, queryWrapper);
+	//-----------MyBatisPlus-------------
+//		Item item=new Item().setStatus(status);
+//		QueryWrapper queryWrapper=new QueryWrapper();
+//		queryWrapper.in("id", Arrays.asList(ids));
+//		row = itemMapper.update(item, queryWrapper);
+
+	//-----------原生MyBatis-------------
+		row = itemMapper.updateStatus(ids, status);
 
 		return row;
 	}
 
-
+	/*查询商品详情*/
+	@Override
+	public ItemDesc doFindItemDesc(Long itemId) {
+		QueryWrapper queryWrapper=new QueryWrapper();
+		queryWrapper.eq("item_id", itemId);
+		List<ItemDesc> itemDescList = itemDescMapper.selectList(queryWrapper);
+		ItemDesc itemDesc= itemDescList.get(0);
+		return itemDesc;
+	}
 
 
 }

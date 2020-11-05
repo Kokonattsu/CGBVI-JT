@@ -24,7 +24,7 @@ public class SysResult {
     }
 
     public static SysResult success(Object data){
-        return new SysResult(200,"请求成功",null);
+        return new SysResult(200,"请求成功",data);
     }
     public static SysResult success(String msg,Object data){
         return new SysResult(200,msg,data);

@@ -14,6 +14,13 @@
 		limit #{start},#{rows}
 	</select>
 
+	<!--添加商品-->
+	<insert id="insertObject" useGeneratedKeys="true" keyProperty="id"
+			parameterType="com.jt.pojo.Item">
+
+	</insert>
+
+
 	<!--根据id批量删除-->
 	<delete id="doDeleteById" parameterType="Long">
 		delete from tb_item
@@ -24,4 +31,13 @@
 		)
 	</delete>
 
+	<!--修改上架状态-->
+	<update id="updateStatus" parameterType="Long">
+		update tb_item set status=#{status},updated=now()
+		where id in
+		<foreach collection="ids" item="id"
+				 open="(" close=")" separator=",">
+			#{id}
+		</foreach>
+	</update>
 </mapper>
