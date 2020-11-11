@@ -17,6 +17,7 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
+    @RequestMapping("/pic/upload")
     public ImgVO doUpload(MultipartFile uploadFile){
         return fileService.doUpload(uploadFile);
 
@@ -36,4 +37,6 @@ public class FileController {
         ImgFile.transferTo(uploadFile); //用流把文件数据传入文件
         return SysResult.success("文件上传成功！");
     }
+
+
 }
