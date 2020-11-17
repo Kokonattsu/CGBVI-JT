@@ -13,6 +13,7 @@
     <modules>
         <module>jt_common</module>
         <module>jt_manage</module>
+        <module>jt_web</module>
     </modules>
 
 

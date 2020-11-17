@@ -13,12 +13,14 @@
         <module name="springboot_demo02" />
         <module name="springboot_demo01" />
         <module name="jt_common" />
+        <module name="jt_web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jt2007" target="1.8" />
       <module name="jt_common" target="1.8" />
       <module name="jt_manage" target="1.8" />
+      <module name="jt_web" target="1.8" />
       <module name="springboot_demo01" target="1.8" />
       <module name="springboot_demo02" target="1.8" />
       <module name="springboot_demo03" target="1.8" />
@@ -30,6 +32,7 @@
       <module name="jt2007" options="" />
       <module name="jt_common" options="-parameters" />
       <module name="jt_manage" options="-parameters" />
+      <module name="jt_web" options="-parameters" />
       <module name="springboot_demo01" options="-parameters" />
       <module name="springboot_demo02" options="-parameters" />
       <module name="springboot_demo03" options="-parameters" />
