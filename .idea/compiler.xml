@@ -7,19 +7,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dubbo-jt-demo-provider" />
+        <module name="dubbo-jt-demo-provider2" />
+        <module name="dubbo-jt-demo-consumer" />
         <module name="testspringmvc" />
         <module name="jt_manage" />
         <module name="springboot_demo03" />
         <module name="springboot_demo02" />
         <module name="springboot_demo01" />
+        <module name="jt_sso" />
         <module name="jt_common" />
         <module name="jt_web" />
+        <module name="dubbo-jt-demo-interface" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dubbo-jt" target="1.8" />
+      <module name="dubbo-jt-demo-consumer" target="1.8" />
+      <module name="dubbo-jt-demo-interface" target="1.8" />
+      <module name="dubbo-jt-demo-provider" target="1.8" />
+      <module name="dubbo-jt-demo-provider2" target="1.8" />
       <module name="jt2007" target="1.8" />
       <module name="jt_common" target="1.8" />
       <module name="jt_manage" target="1.8" />
+      <module name="jt_sso" target="1.8" />
       <module name="jt_web" target="1.8" />
       <module name="springboot_demo01" target="1.8" />
       <module name="springboot_demo02" target="1.8" />
@@ -29,9 +40,14 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dubbo-jt-demo-consumer" options="-parameters" />
+      <module name="dubbo-jt-demo-interface" options="-parameters" />
+      <module name="dubbo-jt-demo-provider" options="-parameters" />
+      <module name="dubbo-jt-demo-provider2" options="-parameters" />
       <module name="jt2007" options="" />
       <module name="jt_common" options="-parameters" />
       <module name="jt_manage" options="-parameters" />
+      <module name="jt_sso" options="-parameters" />
       <module name="jt_web" options="-parameters" />
       <module name="springboot_demo01" options="-parameters" />
       <module name="springboot_demo02" options="-parameters" />

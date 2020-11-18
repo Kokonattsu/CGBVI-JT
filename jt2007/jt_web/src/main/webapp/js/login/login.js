@@ -359,6 +359,7 @@ $("#loginname,#nloginpwd, #authcode").bind('keyup', function (event) {
         $("#loginsubmit").click();
     }
 });
+//登录
 $("#loginsubmit").click(function () {
     var loginUrl = "../uc/loginService";
     var flag = validateFunction.FORM_validate();

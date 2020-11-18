@@ -600,14 +600,23 @@ function checkPin(option) {
             	url : "http://sso.jt.com/user/check/"+escape(pin)+"/1?r=" + Math.random(),
             	dataType : "jsonp",
             	success : function(data) {
-                    checkpin = data.data?"1":"0";
-                    if (!data.data) {
-                        validateSettings.succeed.run(option);
-                        namestate = true;
-                    }else {
-                        validateSettings.error.run(option, "该用户名已占用！");
+
+                    if(data.status==200){
+                        checkpin = data.data?"1":"0";
+                        if (!data.data) {
+                            validateSettings.succeed.run(option);
+                            namestate = true;
+                        }else {
+                            validateSettings.error.run(option, "该用户名已占用！");
+                            namestate = false;
+                        }
+                    }else if (data.status==201){
+                        validateSettings.error.run(option, "服务器正忙....");
                         namestate = false;
                     }
+
+
+
                 }
             });
         } else {
