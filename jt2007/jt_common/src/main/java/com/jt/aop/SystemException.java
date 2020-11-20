@@ -15,7 +15,7 @@ public class SystemException {
     public Object fail(RuntimeException e, HttpServletRequest request){
         String callback = request.getParameter("callback");
         if (callback.isEmpty()){
-            return SysResult.fail(e);
+            return SysResult.fail();
         }else {
             return new JSONPObject(callback,SysResult.fail(e));
         }

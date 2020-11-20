@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jt.iml" filepath="$PROJECT_DIR$/.idea/jt.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt2007.iml" filepath="$PROJECT_DIR$/jt2007/jt2007.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt2007/jt_cart/jt_cart.iml" filepath="$PROJECT_DIR$/jt2007/jt_cart/jt_cart.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_common/jt_common.iml" filepath="$PROJECT_DIR$/jt2007/jt_common/jt_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_manage/jt_manage.iml" filepath="$PROJECT_DIR$/jt2007/jt_manage/jt_manage.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_sso/jt_sso.iml" filepath="$PROJECT_DIR$/jt2007/jt_sso/jt_sso.iml" />

@@ -18,6 +18,9 @@ public class SysResult {
     private Object data;
 
 
+    public static SysResult fail(){
+        return new SysResult(201    ,"请求失败，错误信息",null);
+    }
 
     public static SysResult fail(Exception e){
         return new SysResult(201    ,"请求失败，错误信息"+e.getMessage(),null);

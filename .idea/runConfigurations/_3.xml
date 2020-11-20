@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="单点登录服务-京淘" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="jt_sso" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.jt.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.jt.SpringBootSSORun" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/jt2007/jt_sso" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -15,9 +15,10 @@ public class CORSConfig implements WebMvcConfigurer {
                 //跨域请求是否允许携带凭证（cooke，）
                 .allowCredentials(true)
                 //凭证超时时间，默认1800 seconds 30分钟
-                .maxAge(300)
+                //.maxAge(300)
                 //允许跨域的请求方式 默认get、post、head
-                .allowedMethods();
+                //.allowedMethods()
+        ;
     }
 }
 

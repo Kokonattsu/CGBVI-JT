@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 //@SpringBootTest
 public class TestHttpclient {
@@ -35,6 +36,8 @@ public class TestHttpclient {
 
             String enstring = EntityUtils.toString(entity, "UTF-8");
             System.out.println(enstring);
+
+
 
         }
     }

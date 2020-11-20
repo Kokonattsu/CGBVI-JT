@@ -15,6 +15,7 @@
         <module>jt_manage</module>
         <module>jt_web</module>
         <module>jt_sso</module>
+        <module>jt_cart</module>
     </modules>
 
 
@@ -27,6 +28,7 @@
     </parent>
     <properties>
         <java.version>1.8</java.version>
+        <skipTests>true</skipTests>
     </properties>
 
     <dependencies>
@@ -126,11 +128,11 @@
         </dependency>
 
         <!--引入dubbo配置 -->
-        <!--<dependency>
+        <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>0.2.0</version>
-        </dependency>-->
+        </dependency>
 
         <!--添加Quartz的支持 -->
         <dependency>
