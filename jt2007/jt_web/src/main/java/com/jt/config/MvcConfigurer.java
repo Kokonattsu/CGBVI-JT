@@ -1,6 +1,9 @@
 package com.jt.config;
 
+import com.jt.intercept.UserIntercept;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -14,5 +17,14 @@ public class MvcConfigurer implements WebMvcConfigurer{
 
 		configurer.setUseSuffixPatternMatch(true);
 
+	}
+
+	@Autowired
+	private UserIntercept userIntercept;
+	//添加拦截器
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(userIntercept)
+				.addPathPatterns("/cart/**","/order/**");
 	}
 }

@@ -22,8 +22,8 @@ public class SysResult {
         return new SysResult(201    ,"请求失败，错误信息",null);
     }
 
-    public static SysResult fail(Exception e){
-        return new SysResult(201    ,"请求失败，错误信息"+e.getMessage(),null);
+    public static SysResult fail(String e){
+        return new SysResult(201    ,"请求失败，错误信息:"+e,null);
     }
 
     public static SysResult success(Object data){

@@ -37,6 +37,7 @@ public class UserController {
     @RequestMapping("/doRegister")
     @ResponseBody
     public SysResult doRegister(User user){
+
         Integer integer = dubboUserService.saveUser(user);
         return SysResult.success(integer);
     }

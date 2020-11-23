@@ -6,6 +6,7 @@ import com.jt.pojo.User;
 import com.jt.util.ObjectMapperUtil;
 import com.jt.vo.SysResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,7 @@ public class UserController {
         return SysResult.success(userList);
     }
 
+    //注册验证
     @RequestMapping("/check/{param}/{type}")
     public JSONPObject checkUser(@PathVariable String param,
                                @PathVariable Integer type,
@@ -41,18 +43,27 @@ public class UserController {
         return new JSONPObject(callback, result);
     }
 
-    @RequestMapping("/testhttpClient")
-    public String testhttpClient(){
-        List<User> userList=userService.findObjects();
 
-        return ObjectMapperUtil.toJSON(userList);
-    }
 
     //回显用户信息
     @RequestMapping("/query/{ticket}")
     public JSONPObject query(
             @PathVariable String ticket, String callback){
+        String userJSON = jedisCluster.get(ticket);
+        if (StringUtils.isEmpty(userJSON)){
+            return new JSONPObject(callback, SysResult.fail());
+        }else {
+            return new JSONPObject(callback, SysResult.success(userJSON));
+        }
 
-        return new JSONPObject(callback, SysResult.success(jedisCluster.get(ticket)));
+
+    }
+
+    //测试HTTPClient
+    @RequestMapping("/testhttpClient")
+    public String testhttpClient(){
+        List<User> userList=userService.findObjects();
+
+        return ObjectMapperUtil.toJSON(userList);
     }
 }

@@ -16,5 +16,5 @@ import java.util.List;
 public class EasyUITable implements Serializable {
     private static final long serialVersionUID = -1457566221011950429L;
     private Long total;
-    private List<Item> rows;
+    private List<?> rows;
 }

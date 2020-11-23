@@ -17,7 +17,7 @@ public class Cart extends BasePojo{
     private Long itemId;
     private String itemTitle;
     private String itemImage;
-    private String itemPrice;
+    private Long itemPrice;
     private Integer num;
 
 }

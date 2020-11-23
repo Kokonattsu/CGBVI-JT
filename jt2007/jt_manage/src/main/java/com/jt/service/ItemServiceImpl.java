@@ -1,6 +1,8 @@
 package com.jt.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jt.mapper.ItemDescMapper;
 import com.jt.pojo.Item;
 import com.jt.pojo.ItemDesc;
@@ -25,20 +27,22 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public EasyUITable findItemByPage(Integer page, Integer rows) {
 
-		Long count=0L;
 		List<Item> itemList=null;
 	//-----------MyBatis-plus------------
-//		IPage<Item> iPage=new Page<>(page,rows);
-//		QueryWrapper queryWrapper=new QueryWrapper();
-//		queryWrapper.orderByDesc("updated");
-//		iPage = itemMapper.selectPage(iPage, queryWrapper);
-//		count=iPage.getTotal();
-//		itemList=iPage.getRecords();
-
+		Long count = Long.valueOf(itemMapper.selectCount(null));
+		IPage<Item> iPage=new Page<>(page,rows);
+		QueryWrapper queryWrapper=new QueryWrapper();
+		queryWrapper.orderByDesc("updated");
+		iPage = itemMapper.selectPage(iPage, queryWrapper);
+		Long total = iPage.getTotal();
+		itemList=iPage.getRecords();
+		//结论，getTotal()和selectCount()结果相同但返回值类型不同
+		System.out.println("getTotal():"+total);
+		System.out.println("selectCount():"+count);
 	//-----------原生mybatis--------------
-		count= itemMapper.findCount();
-		Integer start=(page-1)*rows;
-		itemList= itemMapper.findItemByPage(start, rows);
+//		count= itemMapper.findCount();
+//		Integer start=(page-1)*rows;
+//		itemList= itemMapper.findItemByPage(start, rows);
 
 		return new EasyUITable(count ,itemList);
 	}

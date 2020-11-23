@@ -17,11 +17,13 @@ public class DubboItemServiceImpl implements DubboItemService {
     @Autowired
     private ItemDescMapper itemDescMapper;
 
+    //提供展示商品页的信息
     @Override
     public Item findItemById(Long itemId) {
         return itemMapper.selectById(itemId);
     }
 
+    //商品展示页的详细信息
     @Override
     public ItemDesc findItemDescById(Long itemId) {
         return itemDescMapper.selectById(itemId);

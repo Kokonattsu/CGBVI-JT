@@ -21,6 +21,7 @@ public class DubboUserServiceImpl implements DubboUserService {
     @Autowired
     private JedisCluster jedisCluster;
 
+    //用户注册
     @Override
     public Integer saveUser(User user) {
         String password = user.getPassword();
@@ -29,6 +30,7 @@ public class DubboUserServiceImpl implements DubboUserService {
         return userMapper.insert(user);
     }
 
+    //用户登录
     @Override
     public String doLogin(User user) {
 
@@ -39,10 +41,11 @@ public class DubboUserServiceImpl implements DubboUserService {
         if (dbUser==null){
             return null;
         }
-            String uuid = UUID.randomUUID().toString().replace("-", "");
-            user.setPassword("123456");
-            jedisCluster.set(uuid, ObjectMapperUtil.toJSON(user));
-            return uuid;
+        String uuid = UUID.randomUUID().toString().replace("-", "");
+        dbUser.setPassword("123456");
+        //缓存查询到的用户不然没有id
+        jedisCluster.set(uuid, ObjectMapperUtil.toJSON(dbUser));
+        return uuid;
 
 
     }

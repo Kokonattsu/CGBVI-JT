@@ -7,11 +7,13 @@
       <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-interface/dubbo-jt-demo-interface.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-interface/dubbo-jt-demo-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider/dubbo-jt-demo-provider.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider/dubbo-jt-demo-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/generator/generator.iml" filepath="$PROJECT_DIR$/generator/generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jt.iml" filepath="$PROJECT_DIR$/.idea/jt.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt2007.iml" filepath="$PROJECT_DIR$/jt2007/jt2007.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_cart/jt_cart.iml" filepath="$PROJECT_DIR$/jt2007/jt_cart/jt_cart.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_common/jt_common.iml" filepath="$PROJECT_DIR$/jt2007/jt_common/jt_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_manage/jt_manage.iml" filepath="$PROJECT_DIR$/jt2007/jt_manage/jt_manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt2007/jt_order/jt_order.iml" filepath="$PROJECT_DIR$/jt2007/jt_order/jt_order.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_sso/jt_sso.iml" filepath="$PROJECT_DIR$/jt2007/jt_sso/jt_sso.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_web/jt_web.iml" filepath="$PROJECT_DIR$/jt2007/jt_web/jt_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jtparent.iml" filepath="$PROJECT_DIR$/jt2007/jtparent.iml" />

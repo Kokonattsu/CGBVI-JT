@@ -23,12 +23,13 @@ public class UserServiceImpl implements UserService{
         paramMap.put(3, "email");
     }
 
-
+    //测试查询
     @Override
     public List<User> findObjects() {
         return userMapper.selectList(null);
     }
 
+    //注册验证
     @Override
     public boolean checkUser(String param, Integer type) {
         QueryWrapper<User> queryWrapper=new QueryWrapper();

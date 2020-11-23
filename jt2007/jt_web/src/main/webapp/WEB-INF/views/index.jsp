@@ -66,42 +66,42 @@
 pageConfig.DATA_MScroll =[
     {
         "alt": "",
-        "href": "http://c.fa.jd.com/adclick?sid=2&cid=601&aid=3679&bid=4127&unit=36312&advid=107474&guv=&url=http://sale.jd.com/act/hG3N4B2nt6XUCA.html",
+        "href": "http://www.jt.com/items/562379.html",
         "index": 0,
         "src": "http://img11.360buyimg.com/da/jfs/t382/296/691255709/13325/afe321fd/542907d2Nedd5849c.jpg",
         "ext": ""
     },
     {
         "alt": "",
-        "href": "http://www.jt.com/items/562379.html",
+        "href": "http://www.jt.com/items/1474391979.html",
         "index": 1,
         "src": "http://img13.360buyimg.com/da/jfs/t283/161/1609640628/12590/ecd295d3/543f2a46N876265d2.jpg",
         "ext": ""
     },
     {
         "alt": "",
-        "href": "http://www.jt.com/items/562379.html",
+        "href": "http://www.jt.com/items/1474391979.html",
         "index": 2,
         "src": "http://img14.360buyimg.com/da/jfs/t343/107/1701086212/14927/28286262/54407540N2aace14b.jpg",
         "ext": ""
     },
     {
         "alt": "",
-        "href": "http://c.fa.jd.com/adclick?sid=2&cid=601&aid=3679&bid=4186&unit=36439&advid=109213&guv=&url=http://jmall.jd.com/shop/fotile/index.html",
+        "href": "http://www.jt.com/items/1474391979.html",
         "index": 3,
         "src": "http://img10.360buyimg.com/da/jfs/t310/224/1720371440/7690/f8d25a3d/5440a78bN79d1c1c0.jpg",
         "ext": ""
     },
     {
         "alt": "",
-        "href": "http://c.fa.jd.com/adclick?sid=2&cid=601&aid=3679&bid=4195&unit=36440&advid=109092&guv=&url=http://jmall.jd.com/p203378.html",
+        "href": "http://www.jt.com/items/1474391979.html",
         "index": 4,
         "src": "http://img11.360buyimg.com/da/jfs/t325/95/1665113883/11374/acc43523/543f97a1N5caa7267.jpg",
         "ext": ""
     },
     {
         "alt": "",
-        "href": "http://c.fa.jd.com/adclick?sid=2&cid=601&aid=3679&bid=4205&unit=36441&advid=109294&guv=&url=http://sale.jd.com/act/B1wcFZqvaeg.html",
+        "href": "http://www.jt.com/items/562379.html",
         "index": 5,
         "src": "http://img13.360buyimg.com/da/jfs/t304/3/1721407024/12521/225e8303/5440ebe8N8e04f88d.jpg",
         "ext": ""

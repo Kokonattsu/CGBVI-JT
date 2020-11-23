@@ -12,7 +12,7 @@ public class ObjectMapperUtil {
         try {
             return MAPPER.writeValueAsString(obj);
         } catch (JsonProcessingException e) {
-            SysResult.fail(e);
+            SysResult.fail("转化json异常");
             throw new RuntimeException(e);
         }
     }
@@ -21,7 +21,7 @@ public class ObjectMapperUtil {
         try {
             return MAPPER.readValue(json, object);
         } catch (JsonProcessingException e) {
-            SysResult.fail(e);
+            SysResult.fail("json转化对象异常");
             throw new RuntimeException(e);
         }
     }

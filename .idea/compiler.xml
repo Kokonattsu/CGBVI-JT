@@ -7,19 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dubbo-jt-demo-provider" />
-        <module name="jt_cart" />
         <module name="dubbo-jt-demo-provider2" />
-        <module name="testspringmvc" />
-        <module name="springboot_demo01" />
-        <module name="jt_manage" />
-        <module name="springboot_demo03" />
-        <module name="dubbo-jt-demo-consumer" />
-        <module name="springboot_demo02" />
-        <module name="jt_sso" />
-        <module name="jt_common" />
-        <module name="jt_web" />
         <module name="dubbo-jt-demo-interface" />
+        <module name="jt_web" />
+        <module name="dubbo-jt-demo-provider" />
+        <module name="jt_common" />
+        <module name="jt_order" />
+        <module name="testspringmvc" />
+        <module name="springboot_demo03" />
+        <module name="springboot_demo02" />
+        <module name="springboot_demo01" />
+        <module name="dubbo-jt-demo-consumer" />
+        <module name="jt_cart" />
+        <module name="generator" />
+        <module name="jt_manage" />
+        <module name="jt_sso" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,10 +30,12 @@
       <module name="dubbo-jt-demo-interface" target="1.8" />
       <module name="dubbo-jt-demo-provider" target="1.8" />
       <module name="dubbo-jt-demo-provider2" target="1.8" />
+      <module name="generator" target="1.8" />
       <module name="jt2007" target="1.8" />
       <module name="jt_cart" target="1.8" />
       <module name="jt_common" target="1.8" />
       <module name="jt_manage" target="1.8" />
+      <module name="jt_order" target="1.8" />
       <module name="jt_sso" target="1.8" />
       <module name="jt_web" target="1.8" />
       <module name="springboot_demo01" target="1.8" />
@@ -50,6 +54,7 @@
       <module name="jt_cart" options="-parameters" />
       <module name="jt_common" options="-parameters" />
       <module name="jt_manage" options="-parameters" />
+      <module name="jt_order" options="-parameters" />
       <module name="jt_sso" options="-parameters" />
       <module name="jt_web" options="-parameters" />
       <module name="springboot_demo01" options="-parameters" />
