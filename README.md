@@ -17,10 +17,12 @@
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1、使用Dubbo框架搭建微服务系统
+2、实现后台对商品的增删改查
+3、使用redis集群和AOP对商品分类菜单进行缓存<br />
+4、使用nginx实现商品后台集群的负载均衡和高可用。<br/>
+5、实现mysql的读写分离和高可用，使用mycat搭建mysql集群<br/>
+6、使用redis、Interceptor、和cookie实现单点登录和权限控制<br />
 
 
 
