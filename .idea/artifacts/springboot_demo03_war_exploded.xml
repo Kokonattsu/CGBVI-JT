@@ -72,7 +72,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/springboot_demo03/target/springboot_demo03-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/../CGBVI/springboot_demo03/target/springboot_demo03-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="springboot_demo03/web/Web" />
     </root>

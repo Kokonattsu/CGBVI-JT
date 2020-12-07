@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-consumer/dubbo-jt-demo-consumer.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-consumer/dubbo-jt-demo-consumer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-interface/dubbo-jt-demo-interface.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-interface/dubbo-jt-demo-interface.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider/dubbo-jt-demo-provider.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider/dubbo-jt-demo-provider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" filepath="$PROJECT_DIR$/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/generator/generator.iml" filepath="$PROJECT_DIR$/generator/generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt.iml" filepath="$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-consumer/dubbo-jt-demo-consumer.iml" filepath="$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-consumer/dubbo-jt-demo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-interface/dubbo-jt-demo-interface.iml" filepath="$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-interface/dubbo-jt-demo-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-provider/dubbo-jt-demo-provider.iml" filepath="$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-provider/dubbo-jt-demo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" filepath="$PROJECT_DIR$/../CGBVI/dubbo-jt/dubbo-jt-demo-provider2/dubbo-jt-demo-provider2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/jt.iml" filepath="$PROJECT_DIR$/.idea/jt.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt2007.iml" filepath="$PROJECT_DIR$/jt2007/jt2007.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt2007/jt_cart/jt_cart.iml" filepath="$PROJECT_DIR$/jt2007/jt_cart/jt_cart.iml" />
@@ -19,7 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/jt2007/jtparent.iml" filepath="$PROJECT_DIR$/jt2007/jtparent.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_demo01/springboot_demo01.iml" filepath="$PROJECT_DIR$/springboot_demo01/springboot_demo01.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_demo02/springboot_demo02.iml" filepath="$PROJECT_DIR$/springboot_demo02/springboot_demo02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot_demo03/springboot_demo03.iml" filepath="$PROJECT_DIR$/springboot_demo03/springboot_demo03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CGBVI/springboot_demo03/springboot_demo03.iml" filepath="$PROJECT_DIR$/../CGBVI/springboot_demo03/springboot_demo03.iml" />
     </modules>
   </component>
 </project>

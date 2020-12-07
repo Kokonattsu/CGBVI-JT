@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../CGBVI/springboot_demo03" />
     <file type="web" url="file://$PROJECT_DIR$/jt2007/jt_manage" />
     <file type="web" url="file://$PROJECT_DIR$/jt2007/jt_web" />
-    <file type="web" url="file://$PROJECT_DIR$/springboot_demo03" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -11,13 +11,10 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/springboot_demo01/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot_demo02/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_demo03/pom.xml" />
         <option value="$PROJECT_DIR$/jtparent/pom.xml" />
         <option value="$PROJECT_DIR$/jt2007/pom.xml" />
         <option value="$PROJECT_DIR$/dubbo-jt/pom.xml" />
-        <option value="$PROJECT_DIR$/generator/pom.xml" />
       </list>
     </option>
   </component>
