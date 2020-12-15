@@ -135,7 +135,7 @@
             <version>0.2.0</version>
         </dependency>
 
-        <!--添加Quartz的支持 -->
+        <!--添加Quartz的支持，定时任务框架 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-quartz</artifactId>

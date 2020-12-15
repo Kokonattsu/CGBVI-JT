@@ -21,8 +21,11 @@ import java.util.Arrays;
 public class CacheAOP {
 
     @Autowired
+    //使用redis集群
     private JedisCluster jedis;
+    //使用redis哨兵
     //private ShardedJedis jedis;
+    //使用单台redis
     //private Jedis jedis;
 
     //@Around("@annotation(com.jt.annotation.CacheFind)")
